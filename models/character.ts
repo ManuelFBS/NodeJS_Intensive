@@ -56,4 +56,20 @@ export const updateCharacter = (
     }
 
     characters.set(id, updatedCharacter);
+
+    return updatedCharacter;
+};
+
+export const deleteCharacter = (id: number): boolean => {
+    if (!characters.has(id)) {
+        console.log(
+            'Character with id: ',
+            id,
+            ' not found...!',
+        );
+    }
+
+    characters.delete(id);
+
+    return true;
 };
