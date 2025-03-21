@@ -67,6 +67,7 @@ export const deleteCharacter = (id: number): boolean => {
             id,
             ' not found...!',
         );
+        return false;
     }
 
     characters.delete(id);
